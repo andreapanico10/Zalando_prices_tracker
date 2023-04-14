@@ -14,5 +14,6 @@ IMPORTANT. this is a basic example for beginners and as it is it will be quite b
       ZALANDO_EMAIL = "login email"<br>
       ZALANDO_PASSWORD = "login password"<br>
  </li>
+ <li> Cut and paste the source code of your Zalando favourites page in a file called <code>"favorites.html"</code> </li>
  <li> Run the script: <code> python prices_tracker.py </code> </li>
 </ol>
