@@ -5,7 +5,7 @@ IMPORTANT. this is a basic example for beginners and as it is it will be quite b
 
 At the moment the process of getting the favorite items is done by taking manually html file (Point 3). But if any reader is able to login with python requests, his/her advice would be greatly appreciated.
 
-<h1>How to use</h1>
+<h1>Usage</h1>
 <ol>
  <li> Install requirements using terminal or command line. You should run this command <code> pip install -r requirements.txt. </code></li>
  <li> Create a file ".env" in the project folder and insert the following lines completing adequately:<br>
