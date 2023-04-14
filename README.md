@@ -10,12 +10,12 @@ At the moment the process of getting the favorite items is done by taking manual
  <li> Install requirements using terminal or command line. You should run this command <code> pip install -r requirements.txt. </code></li>
  <li> Create a file ".env" in the project folder and insert the following lines completing adequately:<br>
   <pre>
-      <h6>TELEGRAM_BOT_TOKEN = "Token of the telegram bot"</h6>
-      <h6>CHAT_ID = "Telegram chat id between user and telegram bot"</h6>
-      <h6>MACOS_XML_FILE_PATH = 'html file if you run under Macos'</h6>
-      <h6>WINDOWS_XML_FILE_PATH = 'html file if you run under Windows'</h6>
-      <h6>ZALANDO_EMAIL = "login email"</h6>
-      <h6>ZALANDO_PASSWORD = "login password"</h6>
+      TELEGRAM_BOT_TOKEN = "Token of the telegram bot"
+      CHAT_ID = "Telegram chat id between user and telegram bot"
+      MACOS_XML_FILE_PATH = 'html file if you run under Macos'
+      WINDOWS_XML_FILE_PATH = 'html file if you run under Windows'
+      ZALANDO_EMAIL = "login email"
+      ZALANDO_PASSWORD = "login password"
   </pre>
  </li>
  <li> Cut and paste the html code of your Zalando favourites page in a file called <code>favorites.html</code> </li>
