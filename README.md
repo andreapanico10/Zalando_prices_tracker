@@ -3,6 +3,12 @@
 
 IMPORTANT. this is a basic example for beginners and as it is it will be quite brittle. To improve I recommend users add some error handling for expected errors, like site unavailable, data missing from element selectors, along with some basic logging. These things are not included in this version to keep the level of entry as low as possible. 
 
+<h1> System Architecture</h1>
+ <div align="center">
+    <img src="https://github.com/andreapanico10/Zalando_prices_tracker/blob/main/Pictures/system%20architecture.png" width="700px"</img> 
+</div>
+
+
 <h1>1) WEB SCRAPING: prices_tracker.py Usage</h1>
 <h3>In this first version, favorite items scraping is done from static html file (Point 3)</h3>
 <ol>
