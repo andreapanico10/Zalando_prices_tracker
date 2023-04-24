@@ -50,7 +50,12 @@ IMPORTANT. this is a basic example for beginners and as it is it will be quite b
     <img src="https://github.com/andreapanico10/Zalando_prices_tracker/blob/main/Pictures/cookies.png"</img> 
 </div>
  </li>
- <li> As before, copy as cURL the second graphql/ API in zalando network tab, this is the request for the items; in the API in picture we can see a payload, there is an object in the payload for any dress in our catalog; we need just to copy the first Id and put it in the .env variable REQUEST_ID; the second Id in the picture is the dress Id in Zalando DB</li>
+ <li> As before, copy as cURL the second graphql/ API in zalando network tab, this is the request for the items; in the API in picture we can see a payload, there is an object in the payload for any dress in our catalog; we need just to copy the first Id and put it in the .env variable REQUEST_ID; the second Id in the picture is the dress Id in Zalando DB
+<div align="center">
+    <img src="https://github.com/andreapanico10/Zalando_prices_tracker/blob/main/Pictures/graphql2insomnia.png"</img> 
+</div>
+  
+ </li>
  <li> Create a file ".env" in the project folder and insert the following lines completing adequately:<br>
   <pre>
       TELEGRAM_BOT_TOKEN = "Token of the telegram bot"
