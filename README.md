@@ -4,7 +4,7 @@
 IMPORTANT. this is a basic example for beginners and as it is it will be quite brittle. To improve I recommend users add some error handling for expected errors, like site unavailable, data missing from element selectors, along with some basic logging. These things are not included in this version to keep the level of entry as low as possible. 
 
 <h1>1) prices_tracker.py Usage</h1>
-<h2>In this first version, the process of getting the favorite items is done by taking manually from html file (Point 3)</h2>
+<h3>In this first version, favorite items scraping is done from static html file (Point 3)</h3>
 <ol>
  <li> Install requirements using terminal or command line. You should run this command <code> pip install -r requirements.txt. </code></li>
  <li> Create a file ".env" in the project folder and insert the following lines completing adequately:<br>
@@ -21,5 +21,7 @@ IMPORTANT. this is a basic example for beginners and as it is it will be quite b
  <li> Run the script: <code> python prices_tracker.py </code> </li>
 </ol>
 
-<h1>prices_tracker_requests.py Usage</h1>
+<h1>2) prices_tracker_requests.py Usage</h1>
+<h3>In this second version, I took the info of the dresses from graph ql API intercepted by Zalando website</h3>
+
 
