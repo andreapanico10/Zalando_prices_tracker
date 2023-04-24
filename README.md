@@ -1,7 +1,13 @@
-# Zalando_prices_tracker
+# Zalando prices Tracker
  Subject: Zalando Web scraping with Python 
 
 IMPORTANT. this is a basic example for beginners and as it is it will be quite brittle. To improve I recommend users add some error handling for expected errors, like site unavailable, data missing from element selectors, along with some basic logging. These things are not included in this version to keep the level of entry as low as possible. 
+
+<h1> System Architecture</h1>
+ <div align="center">
+    <img src="https://github.com/andreapanico10/Zalando_prices_tracker/blob/main/Pictures/system%20architecture.png" width="800px"</img> 
+</div>
+An automator app run the script on user' needs during the day (for example, once per hour), the script acquires data from Zalando site and check if there are changes compared to the local DB; if there are any, save them on the DB and triggers the sending of a message on telegram to the user in the case of discount.
 
 <h1>1) WEB SCRAPING: prices_tracker.py Usage</h1>
 <h3>In this first version, favorite items scraping is done from static html file (Point 3)</h3>
