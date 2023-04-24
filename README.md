@@ -5,7 +5,7 @@ IMPORTANT. this is a basic example for beginners and as it is it will be quite b
 
 <h1> System Architecture</h1>
  <div align="center">
-    <img src="https://github.com/andreapanico10/Zalando_prices_tracker/blob/main/Pictures/system%20architecture.png" width="700px"</img> 
+    <img src="https://github.com/andreapanico10/Zalando_prices_tracker/blob/main/Pictures/system%20architecture.png" width="800px"</img> 
 </div>
 
 
