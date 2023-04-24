@@ -37,7 +37,7 @@ IMPORTANT. this is a basic example for beginners and as it is it will be quite b
 </div>
  <li> Get the ID, we need it in the next steps where REQUEST_ID is required; cancel the likedItemsCursor field(it manage the website scroll - 20 items at a time -, if we remove it, we get all the items); increase the field likedEntitiesCount to support the favourites total count</li>
  <div align="center">
-    <img src="https://github.com/andreapanico10/Zalando_prices_tracker/blob/main/Pictures/send_request.png"</img> 
+    <img src="https://github.com/andreapanico10/Zalando_prices_tracker/blob/main/Pictures/insomnia.png"</img> 
 </div>
  <li> Create a file ".env" in the project folder and insert the following lines completing adequately:<br>
   <pre>
