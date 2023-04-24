@@ -45,6 +45,11 @@ IMPORTANT. this is a basic example for beginners and as it is it will be quite b
  <div align="center">
     <img src="https://github.com/andreapanico10/Zalando_prices_tracker/blob/main/Pictures/insomnia.png"</img> 
 </div>
+ <li> Scrolling down we get another fundamental info: COOKIES, copy and paste the 'cookie' field in the .env file
+ <div align="center">
+    <img src="https://github.com/andreapanico10/Zalando_prices_tracker/blob/main/Pictures/cookies.png"</img> 
+</div>
+ </li>
  <li> Create a file ".env" in the project folder and insert the following lines completing adequately:<br>
   <pre>
       TELEGRAM_BOT_TOKEN = "Token of the telegram bot"
