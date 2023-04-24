@@ -45,7 +45,7 @@ headers = {
 
 # Set up the Database and define the model
 db = orm.Database()
-db.bind(provider='sqlite', filename='zalandoDB.sqlite', create_db=True)
+db.bind(provider='sqlite', filename='zalandoDB_scrape.sqlite', create_db=True)
 
 class Dress(db.Entity):
     id = orm.PrimaryKey(int, auto=True)
@@ -72,21 +72,55 @@ def zalando(session, headers, link):
         resp = session.get(url, headers=headers)
         soup = BeautifulSoup(resp.text, "html.parser")
 
-        brand = soup.select_one("span.pVrzNP h3._5Yd-hZ").text
-        dress_type = soup.select_one("h1._2MyPg2 span.R_QwOV").text
-        pic = soup.select_one("div.KLaowZ img._7ZONEy")["src"]
-
         try:
-            price = float(soup.select_one("div.vSgP6A p.TQ5FLB").text.replace("€", "").replace(" ", "").replace(",",".").replace("da",""))
+            brand = soup.find('h3', class_='_5Yd-hZ').text.strip()
         except:
-            price = float(soup.select_one("div.vSgP6A p.pVrzNP").text.replace("€", "").replace(" ", "").replace(",",".").replace("da",""))
+            brand = "no brand"
+        try:
+            name = soup.find('span', class_='R_QwOV').text.strip()
+        except: 
+            name = "no-name"
+
+        price = np.inf
+        try:
+            price = float(soup.find('p', class_='_3SrjVh').text.strip().replace("€", "").replace(" ", "").replace(",",".").replace("da",""))
+        except:
+            price = np.inf
+        if price == np.inf:
+            try:
+                price = float(soup.find('p', class_="KxHAYs _4sa1cA FxZV-M _4F506m").text.strip().replace("€", "").replace(" ", "").replace(",",".").replace("da","")) 
+            except:
+                price = np.inf
+        if price == np.inf:
+            try:
+                price = float(soup.find('p', class_='KxHAYs _4sa1cA dgII7d _3SrjVh _65i7kZ').text.strip().replace("€", "").replace(" ", "").replace(",",".").replace("da",""))
+            except:
+                    price = np.inf
+    
+        try:
+            rating = soup.find('div', class_='_0xLoFW FCIprz').find('div', class_="_0xLoFW")['aria-label'].strip()
+        except:
+            rating = 'no rating'
+        try:
+            color = soup.find('p', class_='KxHAYs lystZ1 dgII7d _4F506m zN9KaA').text.strip()
+        except:
+            color = "no-color"
+        try:
+            image = soup.find('img', class_='KxHAYs lystZ1 FxZV-M _2Pvyxl JT3_zV EKabf7 mo6ZnF _1RurXL mo6ZnF _7ZONEy')['src'].split('=')[0]+'=1800'
+        except:
+            image = 'no-image'
+        try:
+            reviews_num = soup.find('h5', class_='KxHAYs e6UiOt FxZV-M _4F506m').text.strip()
+        except:
+            reviews_num = 'no-num'
+    
 
         dress_data = (
             url,
             brand,
-            dress_type,
+            name,
             price,
-            pic,
+            image,
         )
         return dress_data
     except: # if resp.status_code != 200
@@ -94,7 +128,7 @@ def zalando(session, headers, link):
         return None
 
 
-def print_dress_data(dress, daily_price):
+def print_dress_data( ):
     dress_table = Dress.select_by_sql("SELECT * FROM Dress")
     daily_price_table = DailyPrice.select_by_sql("SELECT * FROM DAILYPRICE")
     
@@ -116,7 +150,7 @@ def save_to_DB(dress_data):
         for dress_item in dress_data:
             dress = Dress(url=dress_item[0], brand=dress_item[1], dress_type=dress_item[2], date_created=datetime.now())
             daily_price = DailyPrice(price=dress_item[3], date_updated=dress.date_created, dress=dress )
-        print_dress_data(dress, daily_price)
+        print_dress_data()
 
 def add_dresses_first_time(session):
 

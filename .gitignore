@@ -1,3 +1,4 @@
 .env
 favorites.html
 zalandoDB.sqlite
+zalandoDB_scrape.sqlite
