@@ -26,10 +26,12 @@ IMPORTANT. this is a basic example for beginners and as it is it will be quite b
 
 <ol>
  <li> Install requirements using terminal or command line. You should run this command <code> pip install -r requirements.txt. </code></li>
- <li> Use a tool like "Insomnia" to get some important info about your API requests parameter as cookies and graph ql ID</li>
+ <li> Copy as cURL the first graphql/ API</li>
  <div align="center">
     <img src="https://github.com/andreapanico10/Zalando_prices_tracker/blob/main/Pictures/graphql.png"</img> 
 </div>
+  <li> Use a tool like "Insomnia" to get some important info about your API requests parameter as cookies and graph ql ID</li>
+
  <li> Create a file ".env" in the project folder and insert the following lines completing adequately:<br>
   <pre>
       TELEGRAM_BOT_TOKEN = "Token of the telegram bot"
