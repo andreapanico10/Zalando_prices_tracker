@@ -37,7 +37,7 @@ IMPORTANT. this is a basic example for beginners and as it is it will be quite b
 </div>
  <li> 
   <ol>
-   <li>Get the ID, we need it in the next steps where REQUEST_ID is required;</li>
+   <li>Get the ID, we need it in the next steps where GRAPHQL_QUERY_ID is required;</li>
    <li>Cancel the likedItemsCursor field (it manage the website scroll - 20 items at a time -, if we remove it, we get all the items);</li>
    <li>Increase the field likedEntitiesCount to support the favourites total count</li>
   </ol>
