@@ -202,7 +202,8 @@ def search_favorites():
             if last_price_value != None and dress_data != None and last_price_value > dress_data['price']:
                 caption = '*SALE {}*\nPrice from: {} € to *{}* €\n-{}%\n{}'.format(dress_data['brand'], last_price_value, dress_data['price'], np.round(100*(1 - (float(dress_data['price'])/float(last_price_value))),2), dress_data['link'])
                 bot = telepot.Bot(TELEGRAM_BOT_TOKEN)
-                bot.sendPhoto(CHAT_ID, dress_data['model_media'], caption=caption, parse_mode= 'Markdown' )
+                photo = dress_data['model_media'] if dress_data['model_media'] else dress_data['media']
+                bot.sendPhoto(CHAT_ID, photo, caption=caption, parse_mode= 'Markdown' )
 
     return prices_changed
 
