@@ -193,7 +193,7 @@ def search_favorites():
 
             if dress_data['price'] != last_price_value:
                 #Add row to db
-                DailyPrice(price=dress_data['price'], date_updated=datetime.now(), dress=dress_id )
+                DailyPrice(price=dress_data['price'], original_price = last_price_value, date_updated=datetime.now(), dress=dress_id )
                 prices_changed.append(dress_data)
 
             ### Send notification ###  if <
