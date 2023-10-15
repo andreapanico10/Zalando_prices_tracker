@@ -73,3 +73,11 @@ An automator app run the script on user' needs during the day (for example, once
  </li>
  <li> Run the script: <code> python prices_tracker_requests.py </code> </li>
 </ol>
+
+
+## Like this project?
+
+If you are feeling stimulated by this project and want to make me smile -> 
+<a href="https://www.buymeacoffee.com/andreapynico" target="_blank">
+  <img src="https://miro.medium.com/v2/resize:fit:1400/1*VJdus0nKuy1uNoByh5BN3w.png" width="135" height="30">
+</a>
